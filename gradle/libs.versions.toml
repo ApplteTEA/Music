@@ -1,0 +1,95 @@
+[versions]
+agp = "8.13.2"
+kotlin = "2.0.21"
+coreKtx = "1.10.1"
+junit = "4.13.2"
+appcompat = "1.6.1"
+material = "1.10.0"
+
+# Coroutines
+coroutines = "1.8.1"
+
+# Compose
+composeBom = "2025.01.00"
+activityCompose = "1.10.0"
+navigationCompose = "2.8.6"
+lifecycle = "2.8.7"
+coil = "2.7.0"
+
+# Hilt
+hilt = "2.52"
+hiltNavigationCompose = "1.2.0"
+
+# Media3
+media3 = "1.5.1"
+
+javaxInject = "1"
+
+composeIcons = "1.7.6"
+
+androidxMedia = "1.7.0"
+
+[libraries]
+androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompat" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+# Coroutines
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutines" }
+kotlinx-coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutines" }
+
+# Compose (BOM + 핵심)
+androidx-compose-bom = { module = "androidx.compose:compose-bom", version.ref = "composeBom" }
+androidx-activity-compose = { module = "androidx.activity:activity-compose", version.ref = "activityCompose" }
+androidx-compose-ui = { module = "androidx.compose.ui:ui" }                       # BOM 사용
+androidx-compose-ui-tooling = { module = "androidx.compose.ui:ui-tooling" }       # BOM 사용
+androidx-compose-ui-tooling-preview = { module = "androidx.compose.ui:ui-tooling-preview" } # BOM 사용
+androidx-compose-material3 = { module = "androidx.compose.material3:material3" }  # BOM 사용
+androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+
+# Lifecycle (viewModel/compose)
+androidx-lifecycle-runtime-ktx = { module = "androidx.lifecycle:lifecycle-runtime-ktx", version.ref = "lifecycle" }
+androidx-lifecycle-viewmodel-compose = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "lifecycle" }
+androidx-lifecycle-runtime-compose = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "lifecycle" }
+
+# Coil (앨범아트 로딩)
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coil" }
+
+#### Coil core (ImageLoader/ImageRequest/Target)
+coil = { module = "io.coil-kt:coil", version.ref = "coil" }
+
+# Hilt
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hilt" }
+androidx-hilt-navigation-compose = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+
+# Media3
+androidx-media3-exoplayer = { module = "androidx.media3:media3-exoplayer", version.ref = "media3" }
+androidx-media3-session = { module = "androidx.media3:media3-session", version.ref = "media3" }
+androidx-media3-ui = { module = "androidx.media3:media3-ui", version.ref = "media3" }
+
+javax-inject = { module = "javax.inject:javax.inject", version.ref = "javaxInject" }
+
+androidx-compose-material-icons-extended = { module = "androidx.compose.material:material-icons-extended", version.ref = "composeIcons" }
+
+#### MediaStyle(NotificationCompat.MediaStyle)용
+androidx-media = { group = "androidx.media", name = "media", version.ref = "androidxMedia" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+kotlin-jvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
+
+# Compose compiler plugin
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+
+# Hilt
+hilt = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+
+# KSP (Kotlin 버전과 매칭되는 string 유지)
+ksp = { id = "com.google.devtools.ksp", version = "2.0.21-1.0.26" }
+
+
